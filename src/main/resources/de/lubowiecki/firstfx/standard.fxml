@@ -2,20 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lubowiecki.firstfx.StandardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lubowiecki.firstfx.StandardController">
    <children>
-      <Label fx:id="title" layoutX="23.0" layoutY="31.0" text="FirstFx" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Label layoutX="20.0" layoutY="20.0" text="FirstFx" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="40.0" />
          </font>
       </Label>
 
-      <Button layoutX="192.0" layoutY="164.0" mnemonicParsing="false" onAction="#aendereTitle" text="Go" />
-      <TextField fx:id="eingabe" layoutX="20.0" layoutY="164.0" />
+      <Button layoutX="506.0" layoutY="20.0" mnemonicParsing="false" onAction="#add" text="Eintragen" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="eingabe" layoutX="344.0" layoutY="20.0" prefHeight="25.0" prefWidth="153.0" AnchorPane.topAnchor="20.0" />
+      <ListView fx:id="eintraege" layoutX="375.0" layoutY="62.0" onMouseClicked="#selectItem" prefHeight="484.0" prefWidth="236.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="279.0" layoutY="24.0" text="Produkt" />
+      <Button layoutX="268.0" layoutY="62.0" mnemonicParsing="false" onAction="#removeSelected" text="Löschen" />
+      <Button layoutX="275.0" layoutY="103.0" mnemonicParsing="false" onAction="#changeSelected" text="Ändern" />
 
    </children>
 </AnchorPane>
